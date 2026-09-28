@@ -221,7 +221,7 @@ class Palletizer(Generic, EasyResource):  # noqa: F405  (Generic comes from the 
                     max_boxes_to_pack = int(max_boxes_to_pack)
                 except (TypeError, ValueError):
                     return {"error": "max_boxes_to_pack must be a number"}
-                return await self.autopack(max_boxes_to_pack)
+            return await self.autopack(max_boxes_to_pack)
         # Route new verbs here: match the verb, call the method,
         # return what it returns.
 
