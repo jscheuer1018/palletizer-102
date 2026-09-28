@@ -343,9 +343,9 @@ class Palletizer(Generic, EasyResource):  # noqa: F405  (Generic comes from the 
                 continue  
             await self.place()
             placed += 1
-            result = {"Number Packed": placed, "Max Boxes": max_boxes_to_pack}
-            self.logger.info(f"autopack: {result}")
-            return result  
+        result = {"Number Packed": placed, "Max Boxes": max_boxes_to_pack}
+        self.logger.info(f"autopack: {result}")
+        return result  
 
 
     # --------------------------------------------------------------- motion
